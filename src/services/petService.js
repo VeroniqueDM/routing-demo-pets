@@ -28,6 +28,8 @@ export const create = async (petData, token) => {
 export const update = (petId, petData) =>
   request.put(`${baseUrl}/pets/${petId}`, petData);
 
+
+// #REST STANDARD
 export const getOne = (petId, signal) => {
   return fetch(`${baseUrl}/pets/${petId}`, { signal }).then((res) =>
     res.json()
