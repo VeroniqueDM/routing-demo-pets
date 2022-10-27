@@ -98,7 +98,7 @@ const Create = () => {
                   </option>
                 ))}
               </select>
-            </span>
+            </span> 
           </p>
 
           <p className="field">

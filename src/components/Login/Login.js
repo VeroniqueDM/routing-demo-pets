@@ -4,7 +4,7 @@ import { useAuthContext } from "../../contexts/AuthContext";
 import {
   useNotificationContext,
   types,
-} from "../../contexts/NotificationContext"; 
+} from "../../contexts/NotificationContext";  
 
 import * as authService from "../../services/authService";
 

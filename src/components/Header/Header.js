@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 
 import { useAuthContext } from "../../contexts/AuthContext";
 
-const Header = () => {
+const Header = (
+  {
+     email
+  }
+) => {
   const { user } = useAuthContext();
 
   let guestNavigation = (

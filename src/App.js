@@ -15,15 +15,25 @@ import Notification from "./components/Common/Notification";
 import ErrorBoundary from "./components/Common/ErrorBoundary";
 import PrivateRoute from "./components/Common/PrivateRoute";
 import GuardedRoute from "./components/Common/GuardedRoute";
+import { useState } from "react";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [user, setUser] = useState({
+    _id: "",
+    email: "",
+    accessToken: "",
+  });
+  const onLogin = (authData) => {
+    setUser(authData);
+  };
   return (
     <ErrorBoundary>
       <AuthProvider>
         <NotificationProvider>
           <div id="container">
-            <Header />
+            <Header email={user.email} />
+            {/* <Header /> */}
 
             <Notification />
 
