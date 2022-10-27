@@ -4,7 +4,7 @@ import { useAuthContext } from "../../contexts/AuthContext";
 
 const Header = (
   {
-     email
+     email 
   }
 ) => {
   const { user } = useAuthContext();

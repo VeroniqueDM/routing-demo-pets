@@ -7,26 +7,26 @@ const Create = () => {
   const { user } = useAuthContext();
   const navigate = useNavigate();
 
-  const [types, setTypes] = useState([]);
-  const [categories, setCategories] = useState([]);
+  // const [types, setTypes] = useState([]);
+  // const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    fetch("https://custom-srv-softuni.herokuapp.com/jsonstore/types")
-      .then((res) => res.json())
-      .then((res) => {
-        let typesResult = Object.values(res);
-        let categories = typesResult.reduce((a, x) => {
-          if (!a[x.category]) {
-            a[x.category] = [];
-          }
-          a[x.category].push(x);
+  // useEffect(() => {
+  //   fetch("https://custom-srv-softuni.herokuapp.com/jsonstore/types")
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       let typesResult = Object.values(res);
+  //       let categories = typesResult.reduce((a, x) => {
+  //         if (!a[x.category]) {
+  //           a[x.category] = [];
+  //         }
+  //         a[x.category].push(x);
 
-          return a;
-        }, {});
-        setCategories(categories);
-        setTypes(typesResult);
-      });
-  }, []);
+  //         return a;
+  //       }, {});
+  //       setCategories(categories);
+  //       setTypes(typesResult);
+  //     });
+  // }, []);
 
   const onPetCreate = (e) => {
     e.preventDefault();
@@ -51,10 +51,10 @@ const Create = () => {
         navigate("/dashboard");
       });
   };
-  const onCategoryChange = (e) => {
-    setTypes(categories[e.target.value]);
-    // setTypes((state) => state.filter((x) => x.category == e.target.value));
-  };
+  // const onCategoryChange = (e) => {
+  //   setTypes(categories[e.target.value]);
+  //   // setTypes((state) => state.filter((x) => x.category == e.target.value));
+  // };
 
   return (
     <section id="create-page" className="create">
@@ -88,7 +88,7 @@ const Create = () => {
               />
             </span>
           </p>
-          <p className="field">
+          {/* <p className="field">
             <label htmlFor="category">Category</label>
             <span className="input">
               <select id="category" name="category" onChange={onCategoryChange}>
@@ -99,20 +99,20 @@ const Create = () => {
                 ))}
               </select>
             </span> 
-          </p>
+          </p> */}
 
           <p className="field">
             <label htmlFor="type">Type</label>
             <span className="input">
               <select id="type" name="type">
-                {types.map((x) => (
+                {/* {types.map((x) => (
                   <option key={x._id} value={x._id}>
                     {x.name}
                   </option>
-                ))}
-                {/* <option value="cats">Cats</option>
+                ))} */}
+                <option value="cats">Cats</option>
                 <option value="dogs">Dogs</option>
-                <option value="other">Other</option> */}
+                <option value="other">Other</option>
               </select>
             </span>
           </p>

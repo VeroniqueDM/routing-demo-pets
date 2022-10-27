@@ -74,11 +74,11 @@ const Details = () => {
     });
   };
 
-//   const userButtons = (
-//     <Button onClick={likeButtonClick} disabled={pet.likes?.includes(user._id)}>
-//       Like
-//     </Button>
-//   );
+  const userButtons = (
+    <Button onClick={likeButtonClick} disabled={pet.likes?.includes(user._id)}>
+      Like
+    </Button>
+  );
 
   return (
     <>
@@ -95,8 +95,8 @@ const Details = () => {
             <img src={pet.imageUrl} />
           </p>
           <div className="actions">
-            {/* {user._id &&
-              (user._id == pet._ownerId ? ownerButtons : userButtons)} */}
+            {user._id &&
+              (user._id == pet._ownerId ? ownerButtons : userButtons)}
 
             <div className="likes">
               <img className="hearts" src="/images/heart.png" />

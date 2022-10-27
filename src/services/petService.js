@@ -1,6 +1,7 @@
 import * as request from "./requester";
 
-const baseUrl = "https://custom-srv-softuni.herokuapp.com/jsonstore";
+// const baseUrl = "https://custom-srv-softuni.herokuapp.com/jsonstore";
+const baseUrl = "http://localhost:3030";
 
 export const getAll = () => request.get(`${baseUrl}/pets`);
 

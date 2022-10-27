@@ -32,8 +32,8 @@ function App() {
       <AuthProvider>
         <NotificationProvider>
           <div id="container">
-            <Header email={user.email} />
-            {/* <Header /> */}
+            {/* <Header email={user.email} /> */}
+            <Header />
 
             <Notification />
 
