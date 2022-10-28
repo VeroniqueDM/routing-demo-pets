@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import * as petService from "../../services/petService";
 import usePetState from "../../hooks/usePetState";
-// import { Alert } from 'react-bootstrap';
+import { Alert } from 'react-bootstrap';
 
 const types = [
   { value: "dog", text: "Dog" },
@@ -61,9 +61,9 @@ const Edit = () => {
                 onChange={nameChangeHandler}
               />
             </span>
-            {/* <Alert variant="danger" show={errors.name}>
+            <Alert variant="danger" show={errors.name}>
               {errors.name}
-            </Alert> */}
+            </Alert>
           </p>
           <p className="field">
             <label htmlFor="description">Description</label>

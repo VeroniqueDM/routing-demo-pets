@@ -10,7 +10,7 @@ import {
 } from "../../contexts/NotificationContext";
 import usePetState from "../../hooks/usePetState";
 
-// import { Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap/';
 import ConfirmDialog from "../Common/ConfirmDialog";
 
 const Details = () => {

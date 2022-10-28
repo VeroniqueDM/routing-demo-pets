@@ -16,7 +16,7 @@ import ErrorBoundary from "./components/Common/ErrorBoundary";
 import PrivateRoute from "./components/Common/PrivateRoute";
 import GuardedRoute from "./components/Common/GuardedRoute";
 import { useState } from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [user, setUser] = useState({

@@ -1,6 +1,6 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from "react";
 
-import * as petService from '../services/petService';
+import * as petService from "../services/petService";
 
 const usePetState = (petId) => {
     const [pet, setPet] = useState({});
@@ -9,23 +9,19 @@ const usePetState = (petId) => {
         const controller = new AbortController();
 
         return controller;
-    }, [])
+    }, []);
 
     useEffect(() => {
-        petService.getOne(petId, controller.signal)
-            .then(petResult => {
-                setPet(petResult);
-            })
+        petService.getOne(petId, controller.signal).then((petResult) => {
+            setPet(petResult);
+        });
 
         return () => {
             controller.abort();
-        }
+        };
     }, [petId, controller]);
 
-    return [
-        pet,
-        setPet
-    ]
+    return [pet, setPet];
 };
 
 export default usePetState;
